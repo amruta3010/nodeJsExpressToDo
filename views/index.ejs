@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TO DO List</title>
+  </head>
+  <body>
+    <h1>TO DO List</h1>
+    <!-- <form action="/task/show/person/P1" method="get"> -->
+    <select>
+    <% for(var i=0;i<persons.length;i++) {%>
+		  <option><%= persons[i].PERSON_NAME%></option>
+	<% } %>
+	</select id="personList">
+	<button type="button" id="showTasksButton">Show Tasks</button>
+	<!-- function myFunction() {
+	    
+			var x = document.getElementById("personList").selectedIndex;
+			console.log("->" + x);
+			console.log("->" + persons[x].PERSON_UUID);
+			
+			fetch('/task/show/person/' + persons[x].PERSON_UUID, {method: 'GET'})
+		    .then(function(response) {
+		      if(response.ok) {
+		        console.log('Click was recorded');
+		        return;
+		      }
+		      throw new Error('Request failed.');
+		    })
+		    .catch(function(error) {
+		      console.log(error);
+		    });
+		} -->
+		
+	<!-- <input type="submit" value="Show Tasks">
+	</form>
+	-->
+  </body>
+  <script src="../client/handler.js"></script>
+</html>
